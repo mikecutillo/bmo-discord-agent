@@ -27,6 +27,30 @@ A 24/7 Discord-based AI companion for the Cutillo household. Runs as a supervise
 
 BMO doesn't ship with hard-coded behaviors. Every thing it does is a **capability row in Notion**, executed by one of six executor types:
 
+```mermaid
+graph TD
+    DM[💬 DM from family] --> Match
+    Cron[⏰ Scheduled tick] --> Match
+    Event[📡 State change] --> Match
+
+    Match[🧭 Capability match] --> Reg[(📋 Notion · 20 capabilities · 6 databases)]
+
+    Match --> Type{Executor type}
+    Type --> IR[intent-response]
+    Type --> SS[scheduled-summary]
+    Type --> SW[state-watcher]
+    Type --> SV[survey]
+    Type --> EA[external-api]
+    Type --> SR[static-response]
+
+    IR --> Discord[💬 Discord channel or DM]
+    SS --> Discord
+    SW --> Discord
+    SV --> Discord
+    EA --> Discord
+    SR --> Discord
+```
+
 1. **`scheduled-summary`** — cron-style, composes and posts a digest
 2. **`intent-response`** — matches a DM to an intent, replies
 3. **`state-watcher`** — reacts to external state changes (devices, calendar, curfew)
@@ -60,4 +84,4 @@ BMO doesn't ship with hard-coded behaviors. Every thing it does is a **capabilit
 
 ---
 
-Part of [AIOS](https://github.com/mikecutillo) — my personal AI Operating System. See the [profile README](https://github.com/mikecutillo) for the full system map.
+Part of the AIOS portfolio. See the [profile README](https://github.com/mikecutillo) for the full system map.
