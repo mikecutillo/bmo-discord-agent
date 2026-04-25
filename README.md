@@ -52,6 +52,12 @@ BMO doesn't ship with hard-coded behaviors. Every thing it does is a **capabilit
 ![Notion API](https://img.shields.io/badge/Notion_API-000000?style=flat&logo=notion&logoColor=white)
 ![launchd](https://img.shields.io/badge/launchd-000000?style=flat&logo=apple&logoColor=white)
 
+## Related in the AIOS Portfolio
+
+- **[AIOS](https://github.com/mikecutillo/aios)** — Personal AI OS host; Next.js dashboard orchestrating 16+ household and business modules
+- **[Household Voice Control](https://github.com/mikecutillo/household-voice-control)** — Voice-interface layer bridging Alexa to a local AI OS via custom skill + Lambda
+- **[Household Digest](https://github.com/mikecutillo/household-digest)** — AI-composed daily digest pipeline; Gmail, Calendar, M365 to Discord every morning
+
 ---
 
 Part of [AIOS](https://github.com/mikecutillo) — my personal AI Operating System. See the [profile README](https://github.com/mikecutillo) for the full system map.
